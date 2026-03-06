@@ -114,7 +114,7 @@
     <div class="section-content">
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
+        <img class="project-thumb" src="img/Différentes_positions.png" alt="Solar Shading Project">
         <div class="project-body">
           <p class="project-title" data-i18n="proj1_title">Artificial Intelligence–Based Analysis of Solar Shading</p>
           <p class="project-desc" data-i18n="proj1_desc">
@@ -130,7 +130,7 @@
                <i class="fa fa-code"></i> <span data-i18n="link_latex">LaTeX</span>
             </a>
              <a class="project-link-badge" href="https://github.com/..." target="_blank">
-              <i class="fa fa-github"></i> <span data-i18n="link_code">Code</span></a>
+              <i class="fa fa-github"></i> <span data-i18n="link_code">Code</span>
             </a>
           </div>
         </div>
@@ -389,8 +389,8 @@ const translations = {
 
     /* Projects */
     project_img:  "Project\nImage",
-    proj1_title:  "Project Title 1",
-    proj1_desc:   "A brief description of the project, including its purpose and outcomes.",
+    proj1_title:  "MLP-Based Prediction of Building Heating Demand under Solar Shading",
+    proj1_desc:   "Trained and compared two MLP architectures (Keras Tuner RandomSearch, 32k dynamic thermal simulations via Pléiades/AMAPOLA) to predict annual building heating demand (kWh/m²). Baseline model vs. shading-aware model incorporating obstacle azimuth and separation distance as explicit inputs. Shading-aware MLP: R²=0.9999, CV(RMSE)=0.27%, 72% RMSE reduction over baseline. SHAP analysis identifies envelope insulation and shading descriptors as dominant predictors. Supervised by Ayoub Hannad, PhD — MINES Paris · PSL (2025–2026).",
     proj2_title:  "Project Title 2",
     proj2_desc:   "A short description of the project, highlighting the technologies used and its impact.",
     proj3_title:  "Project Title 3",
@@ -467,8 +467,8 @@ const translations = {
 
     /* Projects */
     project_img:  "Image du\nprojet",
-    proj1_title:  "Titre du projet 1",
-    proj1_desc:   "Brève description du projet, incluant son objectif et ses résultats.",
+    proj1_title:  "Prédiction de la demande de chauffage par MLP sous ombrage solaire",
+    proj1_desc:   "Entraînement et comparaison de deux architectures MLP (Keras Tuner RandomSearch, 32k simulations thermiques dynamiques via Pléiades/AMAPOLA) pour la prédiction de la demande annuelle de chauffage (kWh/m²). Modèle de référence comparé à un modèle intégrant l'azimut et la distance de séparation de l'obstacle comme entrées explicites. MLP avec ombrage : R²=0,9999, CV(RMSE)=0,27%, réduction du RMSE de 72% par rapport au modèle de base. Analyse SHAP : isolation de l'enveloppe et descripteurs d'ombrage identifiés comme prédicteurs dominants. Encadré par Ayoub Hannad, PhD — MINES Paris · PSL (2025–2026).",
     proj2_title:  "Titre du projet 2",
     proj2_desc:   "Description synthétique du projet, mettant en avant les technologies utilisées et son impact.",
     proj3_title:  "Titre du projet 3",
