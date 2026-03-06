@@ -137,16 +137,23 @@
       </div>
 
        <div class="project-card">
-        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
+         <img class="project-thumb" src="img/q14_soc_uniform_4h.png" alt="Solar Shading Project">
         <div class="project-body">
-          <p class="project-title" data-i18n="proj2_title">Project Title 2</p>
-          <p class="project-desc" data-i18n="proj2_desc">A short description of the project, highlighting the technologies used and its impact.</p>
+          <p class="project-title" data-i18n="proj2_title">V2G Fleet Dispatch Optimization for Primary Frequency Containment Reserve (FCR)</p>
+          <p class="project-desc" data-i18n="proj2_desc">
+            Modelled and compared Uniform vs. Smart V2G dispatch strategies for a 150-EV fleet participating in Primary Frequency Containment Reserves (FCR). 
+            Vectorized simulation in NumPy/Pandas over real grid frequency data (France 2019–2021, 10s resolution). Smart strategy: efficiency 95% vs. 86% (Uniform), OBC operating time reduced to ~6.7% (bang-bang control). 
+            Battery degradation via Thévenin equivalent circuit and throughput-based cost model (€150/kWh, 3000 cycles). Net revenue ~€4/EV/month after depreciation. Supervised by Pierre Dumont, PhD — MINES Paris · PSL (2026).
+            </p>
           <div class="project-links">
-            <a class="project-link-badge" href="https://arxiv.org/abs/..." target="_blank">
-              <i class="fa fa-external-link"></i> <span data-i18n="link_paper">Paper</span>
+            <a class="project-link-badge" href="./papers/Frequency/EE_Projet_Frequency_Report.pdf" target="_blank">
+              <i class="fa fa-file-pdf-o"></i> <span data-i18n="link_paper">Paper</span>
             </a>
-             <a class="project-link-badge" href="https://github.com/..." target="_blank">
-              <i class="fa fa-github"></i> <span data-i18n="link_code">Code</span></a>
+            <a class="project-link-badge" href="https://www.overleaf.com/read/rftxqtzrgyxy#8135b3" target="_blank">
+               <i class="fa fa-code"></i> <span data-i18n="link_latex">LaTeX</span>
+            </a>
+             <a class="project-link-badge" href="https://github.com/aurelianpanait/ev-fleet-fcr-optimization" target="_blank">
+              <i class="fa fa-github"></i> <span data-i18n="link_code">Code</span>
             </a>
           </div>
         </div>
@@ -391,8 +398,8 @@ const translations = {
     project_img:  "Project\nImage",
     proj1_title:  "MLP-Based Prediction of Building Heating Demand under Solar Shading",
     proj1_desc:   "Trained and compared two MLP architectures (Keras Tuner RandomSearch, 32k dynamic thermal simulations via Pléiades/AMAPOLA) to predict annual building heating demand (kWh/m²). Baseline model vs. shading-aware model incorporating obstacle azimuth and separation distance as explicit inputs. Shading-aware MLP: R²=0.9999, CV(RMSE)=0.27%, 72% RMSE reduction over baseline. SHAP analysis identifies envelope insulation and shading descriptors as dominant predictors. Supervised by Ayoub Hannad, PhD — MINES Paris · PSL (2025–2026).",
-    proj2_title:  "Project Title 2",
-    proj2_desc:   "A short description of the project, highlighting the technologies used and its impact.",
+    proj2_title:  "V2G Fleet Dispatch Optimization for Primary Frequency Containment Reserve (FCR)",
+    proj2_desc:   "Modelled and compared Uniform vs. Smart V2G dispatch strategies for a 150-EV fleet participating in Primary Frequency Containment Reserves (FCR). Vectorized simulation in NumPy/Pandas over real grid frequency data (France 2019–2021, 10s resolution). Smart strategy: efficiency 95% vs. 86% (Uniform), OBC operating time reduced to ~6.7% (bang-bang control). Battery degradation via Thévenin equivalent circuit and throughput-based cost model (€150/kWh, 3000 cycles). Net revenue ~€4/EV/month after depreciation. Supervised by Pierre Dumont, PhD — MINES Paris · PSL (2026).",
     proj3_title:  "Project Title 3",
     proj3_desc:   "A concise description of the project, mentioning collaborators and your contributions.",
     proj4_title:  "Project Title 4",
@@ -469,8 +476,8 @@ const translations = {
     project_img:  "Image du\nprojet",
     proj1_title:  "Prédiction de la demande de chauffage par MLP sous ombrage solaire",
     proj1_desc:   "Entraînement et comparaison de deux architectures MLP (Keras Tuner RandomSearch, 32k simulations thermiques dynamiques via Pléiades/AMAPOLA) pour la prédiction de la demande annuelle de chauffage (kWh/m²). Modèle de référence comparé à un modèle intégrant l'azimut et la distance de séparation de l'obstacle comme entrées explicites. MLP avec ombrage : R²=0,9999, CV(RMSE)=0,27%, réduction du RMSE de 72% par rapport au modèle de base. Analyse SHAP : isolation de l'enveloppe et descripteurs d'ombrage identifiés comme prédicteurs dominants. Encadré par Ayoub Hannad, PhD — MINES Paris · PSL (2025–2026).",
-    proj2_title:  "Titre du projet 2",
-    proj2_desc:   "Description synthétique du projet, mettant en avant les technologies utilisées et son impact.",
+    proj2_title:  "Optimisation du dispatch V2G pour la réserve primaire de fréquence (FCR)",
+    proj2_desc:   "Modélisation et comparaison de stratégies de dispatch V2G (Uniforme vs. Smart) pour une flotte de 150 VE en réserve primaire de fréquence (FCR). Simulation vectorisée NumPy/Pandas sur données réelles de fréquence réseau (France 2019–2021, résolution 10s). Stratégie Smart : efficacité 95% vs. 86% (Uniforme), temps de fonctionnement OBC réduit à ~6,7% (contrôle bang-bang). Dégradation batterie via circuit équivalent de Thévenin et modèle de coût par throughput (150€/kWh, 3000 cycles). Revenu net ~4€/VE/mois après dépréciation. Encadré par Pierre Dumont, PhD — MINES Paris · PSL (2026).",
     proj3_title:  "Titre du projet 3",
     proj3_desc:   "Description concise du projet, mentionnant les collaborateurs et vos contributions.",
     proj4_title:  "Titre du projet 4",
