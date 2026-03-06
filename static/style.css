@@ -399,3 +399,41 @@ a:hover { color: #1040a8; text-decoration: underline; }
 
   .site-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+/* ─── Language Switcher ────────────────────────────────── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid #d1d1d6;
+  border-radius: 4px;
+  padding: 2px 9px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #8a8a8e;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lang-btn:hover {
+  border-color: #0f172a;
+  color: #0f172a;
+}
+
+.lang-btn.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.lang-sep {
+  color: #d1d1d6;
+  font-size: 12px;
+}

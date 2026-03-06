@@ -11,35 +11,36 @@
   </script>
 
   <title>Aurelian-Andrei Panait</title>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal website of Aurelian-Andrei Panait — Energy, Quant, AI & Research.">
 
-  <!-- Font Awesome -->
   <script type="text/javascript" src="https://use.fontawesome.com/981e0eb420.js"></script>
-
-  <!-- Google Fonts: DM Serif Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 3 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-  <!-- Site Styles -->
   <link rel="stylesheet" href="./static/style.css">
-
   <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 
 <body>
 <div class="page-wrap">
 
-  <!-- HEADER -->
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
   <header class="site-header">
     <img src="img/eu.png" alt="Aurelian-Andrei Panait" class="headshot">
     <div class="header-info">
+
+      <!-- Language Toggle -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">·</span>
+        <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+      </div>
+
       <h1 class="header-name">Aurelian-Andrei Panait</h1>
       <div class="header-contact">
         <div class="contact-emails">
@@ -50,7 +51,7 @@
         <span class="contact-phone">(+40) 726 109 991</span>
         <span class="header-divider">|</span>
         <div class="contact-links">
-          <a href="cv_panait_andrei.pdf" target="_blank" title="Download CV" aria-label="Download CV">
+          <a href="cv_panait_andrei.pdf" target="_blank" title="CV" aria-label="Download CV">
             <i class="fa fa-file-text"></i><span class="link-label"> CV</span>
           </a>
           <a href="https://github.com/aurelianpanait" target="_blank" title="GitHub" aria-label="GitHub">
@@ -66,36 +67,36 @@
 
   <hr class="section-divider">
 
-  <!-- ABOUT -->
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="About">
-    <div class="section-label"><h5>About</h5></div>
-    <div class="section-content about-text">
-      <p>
-        I am a Master's student in Energy at <a href="https://www.minesparis.psl.eu/en/home/" target="_blank" rel="nofollow">MINES Paris – PSL</a>, specialising in renewable energy integration and energy efficiency. I hold a Bachelor's degree in Energy Engineering from the <a href="https://upb.ro" target="_blank" rel="nofollow">National University of Science and Technology POLITEHNICA of Bucharest</a>, where I graduated in the top 10% of my class (final grade: 85.7%). My Bachelor's thesis, <em>"Floating Photovoltaic Panels: Assessing the Potential, Advantages, and Challenges of Capturing Solar Energy on Water Surfaces"</em>, received a grade of 98% (top 1%) and included the development of a Tilted Global Solar Irradiance model for floating PV analysis.
-      </p>
-      <p>
-        Following this, I was admitted to the Master's programme in Hydroinformatics and Water Engineering at <a href="https://energ.upb.ro" target="_blank" rel="nofollow">POLITEHNICA Bucharest, Faculty of Energy Engineering</a>, where I achieved a first-semester grade of 94% and conducted research on the influence of floating photovoltaic panels on water evaporation. During the second semester, I was selected through a competitive process for an Erasmus exchange at MINES Paris – PSL, where I was subsequently admitted as a full-time M2 student in the highly selective Energy Master's programme.
-      </p>
-      <p>
-        I have completed internships in commodities and energy trading, focusing on market analysis, forecasting, and risk assessment. My interests span financial and energy markets, data-driven decision making, and the energy transition.
-      </p>
+    <div class="section-label">
+      <h5 data-i18n="nav_about">About</h5>
+    </div>
+    <div class="section-content about-text" id="about-content">
+      <!-- Populated by JS -->
     </div>
   </section>
 
   <hr class="section-divider">
 
-  <!-- NEWS -->
+  <!-- ══════════════════════════════════════
+       NEWS
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="News">
-    <div class="section-label"><h5>News</h5></div>
+    <div class="section-label">
+      <h5 data-i18n="nav_news">News</h5>
+    </div>
     <div class="section-content">
       <ul class="news-list">
         <li>
           <span class="news-date">Oct 2023</span>
-          <span class="news-text">Under work — more details coming soon.</span>
+          <span class="news-text" data-i18n="news_1">Under work — more details coming soon.</span>
         </li>
         <li>
           <span class="news-date">Oct 2023</span>
-          <span class="news-text">Under work — more details coming soon.</span>
+          <span class="news-text" data-i18n="news_2">Under work — more details coming soon.</span>
         </li>
       </ul>
     </div>
@@ -103,71 +104,75 @@
 
   <hr class="section-divider">
 
-  <!-- PROJECTS -->
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="Projects">
-    <div class="section-label"><h5>Projects</h5></div>
+    <div class="section-label">
+      <h5 data-i18n="nav_projects">Projects</h5>
+    </div>
     <div class="section-content">
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span>Project<br>Image</span></div>
+        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
         <div class="project-body">
-          <p class="project-title">Project Title 1</p>
-          <p class="project-desc">A brief description of the project, including its purpose and outcomes.</p>
+          <p class="project-title" data-i18n="proj1_title">Project Title 1</p>
+          <p class="project-desc" data-i18n="proj1_desc">A brief description of the project, including its purpose and outcomes.</p>
           <div class="project-links">
             <a class="project-link-badge" href="https://link-to-project1.com" target="_blank">
-              <i class="fa fa-external-link"></i> Website
+              <i class="fa fa-external-link"></i> <span data-i18n="link_website">Website</span>
             </a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span>Project<br>Image</span></div>
+        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
         <div class="project-body">
-          <p class="project-title">Project Title 2</p>
-          <p class="project-desc">A short description of the project, highlighting the technologies used and its impact.</p>
+          <p class="project-title" data-i18n="proj2_title">Project Title 2</p>
+          <p class="project-desc" data-i18n="proj2_desc">A short description of the project, highlighting the technologies used and its impact.</p>
           <div class="project-links">
             <a class="project-link-badge" href="https://link-to-project2.com" target="_blank">
-              <i class="fa fa-external-link"></i> Website
+              <i class="fa fa-external-link"></i> <span data-i18n="link_website">Website</span>
             </a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span>Project<br>Image</span></div>
+        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
         <div class="project-body">
-          <p class="project-title">Project Title 3</p>
-          <p class="project-desc">A concise description of the project, mentioning collaborators and your contributions.</p>
+          <p class="project-title" data-i18n="proj3_title">Project Title 3</p>
+          <p class="project-desc" data-i18n="proj3_desc">A concise description of the project, mentioning collaborators and your contributions.</p>
           <div class="project-links">
             <a class="project-link-badge" href="https://link-to-project3.com" target="_blank">
-              <i class="fa fa-external-link"></i> Website
+              <i class="fa fa-external-link"></i> <span data-i18n="link_website">Website</span>
             </a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span>Project<br>Image</span></div>
+        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
         <div class="project-body">
-          <p class="project-title">Project Title 4</p>
-          <p class="project-desc">A concise description of the project, mentioning collaborators and your contributions.</p>
+          <p class="project-title" data-i18n="proj4_title">Project Title 4</p>
+          <p class="project-desc" data-i18n="proj4_desc">A concise description of the project, mentioning collaborators and your contributions.</p>
           <div class="project-links">
             <a class="project-link-badge" href="https://link-to-project4.com" target="_blank">
-              <i class="fa fa-external-link"></i> Website
+              <i class="fa fa-external-link"></i> <span data-i18n="link_website">Website</span>
             </a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb-placeholder"><span>Project<br>Image</span></div>
+        <div class="project-thumb-placeholder"><span data-i18n="project_img">Project<br>Image</span></div>
         <div class="project-body">
-          <p class="project-title">Project Title 5</p>
-          <p class="project-desc">A concise description of the project, mentioning collaborators and your contributions.</p>
+          <p class="project-title" data-i18n="proj5_title">Project Title 5</p>
+          <p class="project-desc" data-i18n="proj5_desc">A concise description of the project, mentioning collaborators and your contributions.</p>
           <div class="project-links">
             <a class="project-link-badge" href="https://link-to-project5.com" target="_blank">
-              <i class="fa fa-external-link"></i> Website
+              <i class="fa fa-external-link"></i> <span data-i18n="link_website">Website</span>
             </a>
           </div>
         </div>
@@ -178,9 +183,13 @@
 
   <hr class="section-divider">
 
-  <!-- EMPLOYMENT -->
+  <!-- ══════════════════════════════════════
+       EMPLOYMENT
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="Employment">
-    <div class="section-label"><h5>Employment</h5></div>
+    <div class="section-label">
+      <h5 data-i18n="nav_employment">Employment</h5>
+    </div>
     <div class="section-content">
       <div class="entry-list">
 
@@ -188,7 +197,7 @@
           <div class="entry-logo"><img src="img/work/mines.png" alt="MINES Paris – PSL"></div>
           <div class="entry-body">
             <p class="entry-org">MINES Paris – PSL</p>
-            <p class="entry-role">Thermodynamic Systems Research Group</p>
+            <p class="entry-role" data-i18n="job1_role">Thermodynamic Systems Research Group</p>
             <p class="entry-period">Apr 2025 – Sep 2025</p>
           </div>
         </div>
@@ -197,7 +206,7 @@
           <div class="entry-logo"><img src="img/work/tinmar.png" alt="Tinmar Energy"></div>
           <div class="entry-body">
             <p class="entry-org">Tinmar Energy</p>
-            <p class="entry-role">Proprietary Trading Intern</p>
+            <p class="entry-role" data-i18n="job2_role">Proprietary Trading Intern</p>
             <p class="entry-period">Jul 2024 – Oct 2024</p>
           </div>
         </div>
@@ -206,7 +215,7 @@
           <div class="entry-logo"><img src="img/work/tinmar.png" alt="Tinmar Energy"></div>
           <div class="entry-body">
             <p class="entry-org">Tinmar Energy</p>
-            <p class="entry-role">Energy Trading Analyst Intern</p>
+            <p class="entry-role" data-i18n="job3_role">Energy Trading Analyst Intern</p>
             <p class="entry-period">Jun 2023 – Oct 2023</p>
           </div>
         </div>
@@ -215,7 +224,7 @@
           <div class="entry-logo"><img src="img/work/Zeiss.png" alt="Spectro Optica Zeiss"></div>
           <div class="entry-body">
             <p class="entry-org">Spectro Optica Zeiss</p>
-            <p class="entry-role">Optical Technology Engineer</p>
+            <p class="entry-role" data-i18n="job4_role">Optical Technology Engineer</p>
             <p class="entry-period">2020 – 2023</p>
           </div>
         </div>
@@ -226,26 +235,30 @@
 
   <hr class="section-divider">
 
-  <!-- EDUCATION -->
+  <!-- ══════════════════════════════════════
+       EDUCATION
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="Education">
-    <div class="section-label"><h5>Education</h5></div>
+    <div class="section-label">
+      <h5 data-i18n="nav_education">Education</h5>
+    </div>
     <div class="section-content">
       <div class="entry-list">
 
         <div class="entry-item">
           <div class="entry-logo"><img src="img/work/mines.png" alt="MINES Paris – PSL"></div>
           <div class="entry-body">
-            <p class="entry-org">École Nationale Supérieure des Mines de Paris</p>
-            <p class="entry-role">MSc Energy</p>
-            <p class="entry-period">2025 – present</p>
+            <p class="entry-org" data-i18n="edu1_org">École Nationale Supérieure des Mines de Paris</p>
+            <p class="entry-role" data-i18n="edu1_role">MSc Energy</p>
+            <p class="entry-period">2025 – <span data-i18n="present">present</span></p>
           </div>
         </div>
 
         <div class="entry-item">
           <div class="entry-logo"><img src="img/work/energetica.png" alt="POLITEHNICA Bucharest – Faculty of Energy"></div>
           <div class="entry-body">
-            <p class="entry-org">NUST POLITEHNICA Bucharest – Faculty of Energy Engineering</p>
-            <p class="entry-role">MSc Hydroinformatics and Water Engineering</p>
+            <p class="entry-org" data-i18n="edu2_org">NUST POLITEHNICA Bucharest – Faculty of Energy Engineering</p>
+            <p class="entry-role" data-i18n="edu2_role">MSc Hydroinformatics and Water Engineering</p>
             <p class="entry-period">2024 – 2025</p>
           </div>
         </div>
@@ -253,8 +266,8 @@
         <div class="entry-item">
           <div class="entry-logo"><img src="img/work/UPB.png" alt="POLITEHNICA Bucharest"></div>
           <div class="entry-body">
-            <p class="entry-org">NUST POLITEHNICA Bucharest</p>
-            <p class="entry-role">BSc Energy Engineering</p>
+            <p class="entry-org" data-i18n="edu3_org">NUST POLITEHNICA Bucharest</p>
+            <p class="entry-role" data-i18n="edu3_role">BSc Energy Engineering</p>
             <p class="entry-period">2020 – 2024</p>
           </div>
         </div>
@@ -262,8 +275,8 @@
         <div class="entry-item">
           <div class="entry-logo"><img src="img/work/uom.png" alt="University of Manchester"></div>
           <div class="entry-body">
-            <p class="entry-org">The University of Manchester</p>
-            <p class="entry-role">Undergraduate Studies – Electronic Engineering</p>
+            <p class="entry-org" data-i18n="edu4_org">The University of Manchester</p>
+            <p class="entry-role" data-i18n="edu4_role">Undergraduate Studies – Electronic Engineering</p>
             <p class="entry-period">2015 – 2016</p>
           </div>
         </div>
@@ -274,18 +287,22 @@
 
   <hr class="section-divider">
 
-  <!-- ADDITIONAL INFORMATION -->
+  <!-- ══════════════════════════════════════
+       ADDITIONAL INFORMATION
+  ══════════════════════════════════════ -->
   <section class="section-row" aria-label="Additional Information">
-    <div class="section-label"><h5>Additional</h5></div>
+    <div class="section-label">
+      <h5 data-i18n="nav_additional">Additional</h5>
+    </div>
     <div class="section-content">
       <ul class="info-list">
         <li>
-          <span class="info-key">Scholarships &amp; Honours</span>
-          Merit scholarship, University of Manchester (2015); merit scholarships throughout BSc at POLITEHNICA Bucharest (2020–2024), including <span class="highlight-green">Top 1% of the entire faculty in Year 2</span>; merit scholarship, first semester of MSc (2024); Erasmus scholarship (2025) — <span class="highlight-green">sole recipient</span>.
+          <span class="info-key" data-i18n="add_scholarships_key">Scholarships &amp; Honours</span>
+          <span data-i18n="add_scholarships_val">Merit scholarship, University of Manchester (2015); merit scholarships throughout BSc at POLITEHNICA Bucharest (2020–2024), including <span class="highlight-green">Top 1% of the entire faculty in Year 2</span>; merit scholarship, first semester of MSc (2024); Erasmus scholarship (2025) — <span class="highlight-green">sole recipient</span>.</span>
         </li>
         <li>
-          <span class="info-key">Interests</span>
-          Snowboarding, recreational running, poker, options trading (covered calls), long-term investing. Volunteer with Greenpeace and the Red Cross. Member of CIGRE.
+          <span class="info-key" data-i18n="add_interests_key">Interests</span>
+          <span data-i18n="add_interests_val">Snowboarding, recreational running, poker, options trading (covered calls), long-term investing. Volunteer with Greenpeace and the Red Cross. Member of CIGRE.</span>
         </li>
       </ul>
     </div>
@@ -293,7 +310,9 @@
 
   <hr class="section-divider">
 
-  <!-- FOOTER -->
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="footer-links">
       <img src="img/robot.png" alt="" class="footer-seal">
@@ -305,10 +324,204 @@
       <a href="https://www.linkedin.com/in/panait-andrei-52b598100/" target="_blank">LinkedIn</a>
     </div>
     <div class="footer-credit">
-      Design inspired by <a href="https://jparkerholder.github.io" target="_blank">J. Parker Holder</a>
+      <span data-i18n="footer_credit">Design inspired by</span>
+      <a href="https://jparkerholder.github.io" target="_blank">J. Parker Holder</a>
     </div>
   </footer>
 
 </div><!-- /.page-wrap -->
+
+<!-- ══════════════════════════════════════
+     TRANSLATIONS + LANGUAGE SWITCHER
+══════════════════════════════════════ -->
+<script>
+const translations = {
+  en: {
+    /* Navigation labels */
+    nav_about:      "About",
+    nav_news:       "News",
+    nav_projects:   "Projects",
+    nav_employment: "Employment",
+    nav_education:  "Education",
+    nav_additional: "Additional",
+
+    /* About section — rendered as HTML paragraphs */
+    about_html: `
+      <p>
+        I am a Master's student in Energy at <a href="https://www.minesparis.psl.eu/en/home/" target="_blank" rel="nofollow">MINES Paris – PSL</a>,
+        specialising in renewable energy integration and energy efficiency. I hold a Bachelor's degree in Energy Engineering from the
+        <a href="https://upb.ro" target="_blank" rel="nofollow">National University of Science and Technology POLITEHNICA of Bucharest</a>,
+        where I graduated in the top 10% of my class (final grade: 85.7%). My Bachelor's thesis,
+        <em>"Floating Photovoltaic Panels: Assessing the Potential, Advantages, and Challenges of Capturing Solar Energy on Water Surfaces"</em>,
+        received a grade of 98% (top 1%) and included the development of a Tilted Global Solar Irradiance model for floating PV analysis.
+      </p>
+      <p>
+        Following this, I was admitted to the Master's programme in Hydroinformatics and Water Engineering at
+        <a href="https://energ.upb.ro" target="_blank" rel="nofollow">POLITEHNICA Bucharest, Faculty of Energy Engineering</a>,
+        where I achieved a first-semester grade of 94% and conducted research on the influence of floating photovoltaic panels on water evaporation.
+        During the second semester, I was selected through a competitive process for an Erasmus exchange at MINES Paris – PSL,
+        where I was subsequently admitted as a full-time M2 student in the highly selective Energy Master's programme.
+      </p>
+      <p>
+        I have completed internships in commodities and energy trading, focusing on market analysis, forecasting, and risk assessment.
+        My interests span financial and energy markets, data-driven decision making, and the energy transition.
+      </p>`,
+
+    /* News */
+    news_1: "Under work — more details coming soon.",
+    news_2: "Under work — more details coming soon.",
+
+    /* Projects */
+    project_img:  "Project\nImage",
+    proj1_title:  "Project Title 1",
+    proj1_desc:   "A brief description of the project, including its purpose and outcomes.",
+    proj2_title:  "Project Title 2",
+    proj2_desc:   "A short description of the project, highlighting the technologies used and its impact.",
+    proj3_title:  "Project Title 3",
+    proj3_desc:   "A concise description of the project, mentioning collaborators and your contributions.",
+    proj4_title:  "Project Title 4",
+    proj4_desc:   "A concise description of the project, mentioning collaborators and your contributions.",
+    proj5_title:  "Project Title 5",
+    proj5_desc:   "A concise description of the project, mentioning collaborators and your contributions.",
+    link_website: "Website",
+
+    /* Employment roles */
+    job1_role: "Thermodynamic Systems Research Group",
+    job2_role: "Proprietary Trading Intern",
+    job3_role: "Energy Trading Analyst Intern",
+    job4_role: "Optical Technology Engineer",
+
+    /* Education */
+    edu1_org:  "École Nationale Supérieure des Mines de Paris",
+    edu1_role: "MSc Energy",
+    edu2_org:  "NUST POLITEHNICA Bucharest – Faculty of Energy Engineering",
+    edu2_role: "MSc Hydroinformatics and Water Engineering",
+    edu3_org:  "NUST POLITEHNICA Bucharest",
+    edu3_role: "BSc Energy Engineering",
+    edu4_org:  "The University of Manchester",
+    edu4_role: "Undergraduate Studies – Electronic Engineering",
+    present:   "present",
+
+    /* Additional */
+    add_scholarships_key: "Scholarships & Honours",
+    add_scholarships_val: `Merit scholarship, University of Manchester (2015); merit scholarships throughout BSc at POLITEHNICA Bucharest (2020–2024),
+      including <span class="highlight-green">Top 1% of the entire faculty in Year 2</span>;
+      merit scholarship, first semester of MSc (2024); Erasmus scholarship (2025) — <span class="highlight-green">sole recipient</span>.`,
+    add_interests_key: "Interests",
+    add_interests_val: "Snowboarding, recreational running, poker, options trading (covered calls), long-term investing. Volunteer with Greenpeace and the Red Cross. Member of CIGRE.",
+
+    /* Footer */
+    footer_credit: "Design inspired by",
+  },
+
+  fr: {
+    /* Navigation labels */
+    nav_about:      "À propos",
+    nav_news:       "Actualités",
+    nav_projects:   "Projets",
+    nav_employment: "Expérience",
+    nav_education:  "Formation",
+    nav_additional: "Divers",
+
+    /* About section */
+    about_html: `
+      <p>
+        Je suis étudiant en Master Énergie à <a href="https://www.minesparis.psl.eu/en/home/" target="_blank" rel="nofollow">MINES Paris – PSL</a>,
+        spécialisé dans l'intégration des énergies renouvelables et l'efficacité énergétique. Je suis titulaire d'une licence en Génie Énergétique de
+        l'<a href="https://upb.ro" target="_blank" rel="nofollow">Université Nationale des Sciences et Technologies POLITEHNICA de Bucarest</a>,
+        où j'ai obtenu mon diplôme dans les 10 % premiers de ma promotion (note finale : 85,7 %). Mon mémoire de licence,
+        <em>« Panneaux photovoltaïques flottants : évaluation du potentiel, des avantages et des défis de la capture de l'énergie solaire sur les surfaces aquatiques »</em>,
+        a été noté 98 % (top 1 %) et comprenait le développement d'un modèle d'irradiance solaire globale inclinée pour l'analyse des PV flottants.
+      </p>
+      <p>
+        Par la suite, j'ai été admis au Master Hydroinformatique et Ingénierie de l'Eau à
+        <a href="https://energ.upb.ro" target="_blank" rel="nofollow">POLITEHNICA Bucarest, Faculté de Génie Énergétique</a>,
+        où j'ai obtenu une note de 94 % au premier semestre et mené des recherches sur l'influence des panneaux photovoltaïques flottants sur l'évaporation de l'eau.
+        Au second semestre, j'ai été sélectionné par voie compétitive pour un échange Erasmus à MINES Paris – PSL,
+        où j'ai ensuite été admis en tant qu'étudiant M2 à temps plein dans le programme de Master Énergie très sélectif.
+      </p>
+      <p>
+        J'ai effectué des stages dans les domaines des matières premières et du trading d'énergie, avec un focus sur l'analyse de marché, la prévision et la gestion des risques.
+        Mes centres d'intérêt incluent les marchés financiers et énergétiques, la prise de décision fondée sur les données et la transition énergétique.
+      </p>`,
+
+    /* News */
+    news_1: "En cours de préparation — plus de détails bientôt.",
+    news_2: "En cours de préparation — plus de détails bientôt.",
+
+    /* Projects */
+    project_img:  "Image du\nprojet",
+    proj1_title:  "Titre du projet 1",
+    proj1_desc:   "Brève description du projet, incluant son objectif et ses résultats.",
+    proj2_title:  "Titre du projet 2",
+    proj2_desc:   "Description synthétique du projet, mettant en avant les technologies utilisées et son impact.",
+    proj3_title:  "Titre du projet 3",
+    proj3_desc:   "Description concise du projet, mentionnant les collaborateurs et vos contributions.",
+    proj4_title:  "Titre du projet 4",
+    proj4_desc:   "Description concise du projet, mentionnant les collaborateurs et vos contributions.",
+    proj5_title:  "Titre du projet 5",
+    proj5_desc:   "Description concise du projet, mentionnant les collaborateurs et vos contributions.",
+    link_website: "Site web",
+
+    /* Employment roles */
+    job1_role: "Groupe de recherche sur les systèmes thermodynamiques",
+    job2_role: "Stagiaire trading pour compte propre",
+    job3_role: "Stagiaire analyste trading énergie",
+    job4_role: "Ingénieur en technologie optique",
+
+    /* Education */
+    edu1_org:  "École Nationale Supérieure des Mines de Paris",
+    edu1_role: "Master Énergie",
+    edu2_org:  "NUST POLITEHNICA Bucarest – Faculté de Génie Énergétique",
+    edu2_role: "Master Hydroinformatique et Ingénierie de l'Eau",
+    edu3_org:  "NUST POLITEHNICA Bucarest",
+    edu3_role: "Licence Génie Énergétique",
+    edu4_org:  "Université de Manchester",
+    edu4_role: "Études de premier cycle – Génie Électronique",
+    present:   "présent",
+
+    /* Additional */
+    add_scholarships_key: "Bourses & Distinctions",
+    add_scholarships_val: `Bourse au mérite, Université de Manchester (2015) ; bourses au mérite tout au long de la licence à POLITEHNICA Bucarest (2020–2024),
+      dont <span class="highlight-green">Top 1 % de toute la faculté en 2e année</span> ;
+      bourse au mérite, premier semestre de Master (2024) ; bourse Erasmus (2025) — <span class="highlight-green">seul récipiendaire</span>.`,
+    add_interests_key: "Centres d'intérêt",
+    add_interests_val: "Snowboard, course à pied, poker, trading d'options (covered calls), investissement à long terme. Bénévole pour Greenpeace et la Croix-Rouge. Membre du CIGRE.",
+
+    /* Footer */
+    footer_credit: "Design inspiré de",
+  }
+};
+
+/* ── Core switcher logic ─────────────────────────── */
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = translations[lang];
+
+  /* 1. Update all data-i18n elements (except about which is injected separately) */
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+
+  /* 2. Inject About HTML block */
+  document.getElementById('about-content').innerHTML = t.about_html;
+
+  /* 3. Update <html lang> attribute */
+  document.documentElement.lang = lang;
+
+  /* 4. Update button active states */
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+}
+
+/* Init on page load */
+setLang('en');
+</script>
+
 </body>
 </html>
