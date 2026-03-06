@@ -437,3 +437,14 @@ a:hover { color: #1040a8; text-decoration: underline; }
   color: #d1d1d6;
   font-size: 12px;
 }
+
+
+/* ─── Walking Robot pentru animatie ────────────────────────────────────── */
+/* ─── Walking Robot ────────────────────────────────────── */
+.walking-robot {
+  position: fixed;
+  width: 50px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 999;
+}

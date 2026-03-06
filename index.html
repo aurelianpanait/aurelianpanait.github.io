@@ -24,8 +24,53 @@
   <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 
+
 <body>
 <div class="page-wrap">
+
+  <!-- ══════════════════════════════════════
+       Animatie sa urmareasca  mouse-ul robotelul
+  ══════════════════════════════════════ -->
+  
+  <img src="img/robot.png" alt="" class="walking-robot" id="walking-robot">
+
+<script>
+  const robot = document.getElementById('walking-robot');
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let robotX = window.innerWidth / 2;
+  let robotY = window.innerHeight / 2;
+  let facingRight = true;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    const dx = mouseX - robotX;
+    const dy = mouseY - robotY;
+
+    robotX += dx * 0.08;
+    robotY += dy * 0.08;
+
+    if (dx > 1 && !facingRight) {
+      facingRight = true;
+      robot.style.transform = 'scaleX(1)';
+    } else if (dx < -1 && facingRight) {
+      facingRight = false;
+      robot.style.transform = 'scaleX(-1)';
+    }
+
+    robot.style.left = (robotX - 25) + 'px';
+    robot.style.top  = (robotY - 25) + 'px';
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  
+</script>
 
   <!-- ══════════════════════════════════════
        HEADER
